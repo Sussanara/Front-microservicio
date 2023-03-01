@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo-vt.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+</head>
+
+<body class=".bg-light-subtle d-flex justify-content-center align-items-center m-5">
+    <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
+        <div class="text-center fs-3 fw-bold">Portal de registro</div>
+        <div class="input-group mt-4">
+            <input class="form-control bg-light" type="text" placeholder="Nombre y apellido" [(ngModel)]="trabajador.nombre"/>
+        </div>
+        <div class="input-group mt-2">
+            <input class="form-control bg-light" type="text" placeholder="Email" [(ngModel)]="trabajador.email"/>
+        </div>
+        <select class="form-select mt-2 bg-light" aria-label="Default select example" [(ngModel)]="trabajador.area">
+            <option selected>Selecciona área</option>
+            <option value="1">RR.HH</option>
+            <option value="2">Marketing</option>
+            <option value="3">Sostenibilidad</option>
+            <option value="3">Ventas</option>
+          </select>
+        <div class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" (click)="crear()">
+            Guardar
+        </div>
+        <div class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm">
+            Volver
+        </div>
+    </div>
+</body>
+
+</html>
