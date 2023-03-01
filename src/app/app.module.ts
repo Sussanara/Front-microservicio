@@ -7,7 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { ResultadosComponent } from './components/resultados/resultados.component';
 import { DesarrolladorComponent } from './components/desarrollador/desarrollador.component';
 import { TrabajadorComponent } from './components/trabajador/trabajador.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     LayoutModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,11 +10,15 @@ import { TrabajadorService } from 'src/app/services/trabajador.service';
   styleUrls: ['./trabajador.component.css']
 })
 export class TrabajadorComponent implements OnInit {
-
+  
   //titulo = 'Login';
   trabajador: Trabajador = new Trabajador();
   constructor(private service: TrabajadorService,
     private router: Router) { }
+
+/*   trabajadorArray: Trabajador[]=[]  
+
+  selectedTrabajador: Trabajador = new Trabajador(); */
 
   ngOnInit() {
 
@@ -22,10 +26,11 @@ export class TrabajadorComponent implements OnInit {
   public crear(): void {
     this.service.crear(this.trabajador).subscribe(trabajador => {
       console.log(trabajador);
-      alert(`trabajador ${trabajador.nombre}creado con éxito`);
+      alert(`trabajador ${trabajador.nombre} creado con éxito`);
       this.router.navigate(['/trabajador']);
     });
-  }
+  } 
+
 }
 
 

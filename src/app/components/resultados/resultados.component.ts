@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ResultadosComponent {
 
+  public barChartOptions:any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+
+  public barChartLabels: string[] = ['RR.HH', 'Marketing', 'Sostenibilidad', 'Ventas']
+
 }
