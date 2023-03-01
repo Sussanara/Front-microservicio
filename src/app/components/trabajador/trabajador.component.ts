@@ -11,16 +11,14 @@ import { TrabajadorService } from 'src/app/services/trabajador.service';
 })
 export class TrabajadorComponent implements OnInit {
   
-  //titulo = 'Login';
+
   trabajador: Trabajador = new Trabajador();
   constructor(private service: TrabajadorService,
     private router: Router) { }
 
-/*   trabajadorArray: Trabajador[]=[]  
-
-  selectedTrabajador: Trabajador = new Trabajador(); */
 
   ngOnInit() {
+    
 
   }
   public crear(): void {
