@@ -19,5 +19,12 @@ export class TrabajadorformComponent {
   ngOnInit() {
     this.service.listar().subscribe(trabajador => this.trabajador = trabajador);
   }
-
+  public eliminar(trabajador: Trabajador): void {
+    if (confirm(`Seguro que desea eliminar a ${trabajador.nombre} ?`)) {
+      this.service.eliminar(trabajador.id).subscribe(() => {
+        this.trabajador = this.trabajador.filter(a => a !== trabajador);
+        alert(`Trabajador ${trabajador.id} eliminado con éxito`)
+      });
+    }
+  }
 }

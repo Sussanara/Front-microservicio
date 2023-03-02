@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'trabajador'},
   {path: 'desarrollador', component: DesarrolladorComponent},
   {path: 'trabajador', component: TrabajadorComponent},
-  {path: 'trabajadorform', component: TrabajadorformComponent}
+  {path: 'trabajadorform', component: TrabajadorformComponent},
+  {path: 'trabajador/:id', component: TrabajadorformComponent}
 ];
 
 @NgModule({

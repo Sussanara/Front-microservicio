@@ -17,10 +17,13 @@
         <div class="form-group mt-4">
             <input class="form-control bg-light" type="text" placeholder="Nombre y apellido"
                 [(ngModel)]="trabajador.nombre" />
+            <div class="alert alert-danger" *ngIf="error && error.nombre">{{ error.nombre }}</div>    
         </div>
         <div class="form-group">
             <div class="form-group mt-2">
-                <input class="form-control bg-light" type="text" placeholder="Email" [(ngModel)]="trabajador.email" />
+                <input class="form-control bg-light" type="text" placeholder="Email" 
+                [(ngModel)]="trabajador.email" />
+                <div class="alert alert-danger" *ngIf="error && error.email">{{ error.email }}</div>
             </div>
             <select class="form-select mt-2 bg-light" aria-label="Default select example" [(ngModel)]="trabajador.area">
                 <option selected>Selecciona área</option>
